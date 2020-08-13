@@ -1,5 +1,5 @@
 ///////////////Menu Items (MVP)///////////////////
-
+console.log("---------------#1 Menu: Add Items---------------");
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const burger = {name: "Burger", price: 18, category: "Lunch"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
@@ -26,6 +26,24 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+console.log("---------------#2 Menu: Specials---------------");
+
+
+//burger = {name: "Burger", price: 18, category: "Lunch"};
+
+function discount(buyer){
+  if(buyer === "teacher"){
+    burger.price = 13.5;
+  }else if(buyer === "public"){
+    burger.price = 16.2;
+  }else{
+    burger.price = 18;
+  }
+  console.log(burger);
+}
+
+discount("teacher");
+
 
 
 
