@@ -238,12 +238,33 @@ and should return an array of objects.
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
 
-console.log("---------------Stretch 2: getLongestReview---------------");
+console.log("---------------Stretch 2: getLongestReviews---------------");
 
-  function getLongReviews(/* code here */) {
-    /* code here */
+  function getLongestReviews(reviewsArray) {
+    let longReviews = [];
+
+    // console.log(reviewsArray);
+    for(let i = 0; i < reviewsArray.length; i++){
+
+      
+      let feedbackLength = reviewsArray[i].feedback.split(" ").length;
+      if(feedbackLength > 15){
+        longReviews.push(reviewsArray[i]);
+      }
+
+      /*
+      // if feedback is longer than 15 words
+      reviewsArray[i].feedback.split(" ").length > 15
+      longReviews.push(reviewsArray[i]);
+      */
+
+
+    }
+    console.log(longReviews);
+
   }
   
+  getLongestReviews(reviews);
 
 /* STRETCH 3:  This challenge is not related to the data above! 
 
@@ -262,8 +283,10 @@ The returned object should have the following characteristics:
          (2) returns the updated value of the `odometer`.
 */
 
+console.log("---------------Stretch 3: carMaker---------------");
 
-function carMaker(/* code here */) {
-    /* code here */
+
+function carMaker() {
+    
     
 }
