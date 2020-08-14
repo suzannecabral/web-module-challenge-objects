@@ -286,7 +286,55 @@ The returned object should have the following characteristics:
 console.log("---------------Stretch 3: carMaker---------------");
 
 
-function carMaker() {
+// function carMaker(odometer) {
     
+//   let newCar = {
+//     odometer : odometer;
+//     drive : function() {
+//       this.odometer = this.odometer + odometer;
+//       return drive();
+//     };
+//   };
     
+// }
+
+// carMaker(500);
+
+
+function carMaker(odometer){
+  const car = {
+    odometer:odometer,
+    drive: function(distance) {
+
+      console.log(`Starting odometer: ${this.odometer}`);
+      //console.log(this.odometer + odometer);
+      this.odometer = this.odometer + odometer;
+    }
+  };
+  car.drive(odometer);
+  console.log(`Ending odometer: ${car.odometer}`);
+  return car;
 }
+
+console.log(carMaker(100));
+
+
+/* 
+
+This one works:
+
+
+function carMaker(odometer){
+  const car = {
+    odometer:odometer,
+    drive: function() {
+      console.log(this.odometer + odometer);
+    }
+  };
+  //console.log(car.odometer);
+  car.drive();
+}
+
+carMaker(500);
+
+*/
