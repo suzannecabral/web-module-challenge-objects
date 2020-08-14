@@ -1,3 +1,14 @@
+/*
+Forbidden methods:
+.map
+.foreach
+.source
+.filter
+*/
+
+// use for loops instead for this exercise
+
+
 ///////////////Menu Items (MVP)///////////////////
 console.log("---------------#1 Menu: Add Items---------------");
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
@@ -60,9 +71,35 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
+console.log("---------------#3 Reviews: Julius---------------");
+
+//     console.log(reviews.indexOf("name"));
+
+
+
+function findReview(baseArray,reviewerName){
+  let foundReviews = []; 
+  for(let i = 0; i < baseArray.length; i++){
+        if(baseArray[i].name.includes(reviewerName)){
+          foundReviews.push(baseArray[i]);
+        }
+    }
+    console.log(foundReviews[0]);
+}
+
+
+findReview(reviews,"Julius");
+
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+console.log("---------------#4 Reviews: Add New---------------");
+
+
+
+
+
+
 
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
