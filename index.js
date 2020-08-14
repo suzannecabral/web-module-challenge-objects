@@ -180,10 +180,15 @@ For example, if getLastReview is invoked passing the reviews array it will retur
 console.log("---------------#7 Reviews: getLastReview---------------");
 
 
-function getLastReview() {
-    
+function getLastReview(reviewsArray) {
+    const recentReview = reviewsArray[reviewsArray.length-1];
+    //console.log(recentReview);
+
+    console.log(`${recentReview.name} gave the restaurant a ${recentReview.rating} star review and their feedback was: ${recentReview.feedback}`);
+
   } 
 
+  getLastReview(reviews);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
