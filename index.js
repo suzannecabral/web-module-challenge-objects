@@ -95,14 +95,29 @@ findReview(reviews,"Julius");
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 console.log("---------------#4 Reviews: Add New---------------");
 
+function addReview(baseArray, name, rating, feedback){
+    const newReview = {name, rating, feedback};
+    //console.log(newReview);
+
+    baseArray.push(newReview);
+    console.log(baseArray);
+
+  }
+
+addReview(reviews, "Stephan", "5", "Excellent chicken nuggets!");
 
 
 
 
 
 
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+console.log("---------------#5 Reviews: Update feedback---------------");
+
+
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
