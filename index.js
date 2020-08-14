@@ -117,6 +117,23 @@ addReview(reviews, "Stephan", "5", "Excellent chicken nuggets!");
 console.log("---------------#5 Reviews: Update feedback---------------");
 
 
+function updateFeedback(baseArray,reviewerName,newFeedback){
+
+  for(let i = 0; i < baseArray.length; i++){
+    if(baseArray[i].name === reviewerName){
+      
+      baseArray[i].feedback = baseArray[i].feedback + " " + newFeedback;
+      
+    }
+  }
+
+  console.log(baseArray);
+}
+
+updateFeedback(reviews,"Reyna","this place is chill with really cool people, great for getting work done on weekdays");
+
+
+
 
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
@@ -131,8 +148,13 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
+
+console.log("---------------#6 Reviews: getReviewByIndex---------------");
+
+
+
 function getReviewByIndex(reviews, index) {
-    /* code here */
+    
   }
   
 
