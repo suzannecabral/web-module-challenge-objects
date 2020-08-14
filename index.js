@@ -77,11 +77,11 @@ console.log("---------------#3 Reviews: Julius---------------");
 
 
 
-function findReview(baseArray,reviewerName){
+function findReview(reviewsArray,reviewerName){
   let foundReviews = []; 
-  for(let i = 0; i < baseArray.length; i++){
-        if(baseArray[i].name.includes(reviewerName)){
-          foundReviews.push(baseArray[i]);
+  for(let i = 0; i < reviewsArray.length; i++){
+        if(reviewsArray[i].name.includes(reviewerName)){
+          foundReviews.push(reviewsArray[i]);
         }
     }
     console.log(foundReviews[0]);
@@ -95,12 +95,12 @@ findReview(reviews,"Julius");
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 console.log("---------------#4 Reviews: Add New---------------");
 
-function addReview(baseArray, name, rating, feedback){
+function addReview(reviewsArray, name, rating, feedback){
     const newReview = {name, rating, feedback};
     //console.log(newReview);
 
-    baseArray.push(newReview);
-    console.log(baseArray);
+    reviewsArray.push(newReview);
+    console.log(reviewsArray);
 
   }
 
@@ -117,17 +117,17 @@ addReview(reviews, "Stephan", "5", "Excellent chicken nuggets!");
 console.log("---------------#5 Reviews: Update feedback---------------");
 
 
-function updateFeedback(baseArray,reviewerName,newFeedback){
+function updateFeedback(reviewsArray,reviewerName,newFeedback){
 
-  for(let i = 0; i < baseArray.length; i++){
-    if(baseArray[i].name === reviewerName){
+  for(let i = 0; i < reviewsArray.length; i++){
+    if(reviewsArray[i].name === reviewerName){
       
-      baseArray[i].feedback = baseArray[i].feedback + " " + newFeedback;
+      reviewsArray[i].feedback = reviewsArray[i].feedback + " " + newFeedback;
       
     }
   }
 
-  console.log(baseArray);
+  console.log(reviewsArray);
 }
 
 updateFeedback(reviews,"Reyna","this place is chill with really cool people, great for getting work done on weekdays");
@@ -153,10 +153,19 @@ console.log("---------------#6 Reviews: getReviewByIndex---------------");
 
 
 
-function getReviewByIndex(reviews, index) {
-    
-  }
+function getReviewByIndex(reviewsArray, index) {
+ 
+//  reviewsArray[index]
+
+//console.log(reviewsArray[index]);
+
+console.log(`${reviewsArray[index].name} gave the restaurant a ${reviewsArray[index].rating} star review and their feedback was: ${reviewsArray[index].feedback}`);
+      
+}
   
+getReviewByIndex(reviews, 0);
+
+
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -167,8 +176,12 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+
+console.log("---------------#7 Reviews: getLastReview---------------");
+
+
+function getLastReview() {
+    
   } 
 
 
